@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      color: black;
+    }
+
+    .animation-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .container {
+      position: absolute;
+      width: 15%;
+      height: 100%;
+      background-color: rgba(146, 146, 238, 0.116);
+    }
+
+    .container-1 { left: 0vw; }
+    .container-2 { left: 20vw; }
+    .container-3 { left: 40vw; }
+    .container-4 { left: 60vw; }
+    .container-5 { left: 80vw; }
+
+    .ball {
+      position: absolute;
+      top: 50vh;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      background-color: rgb(255, 230, 0);
+      border-radius: 50%;
+      animation: moveball 10s linear infinite;
+    }
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .content {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    @keyframes moveball {
+      0%, 100% { left: 0; top: 50vh; background-color: rgb(255, 230, 0); }
+      25% { left: 25vw; top: 25vh; background-color: rgb(0, 128, 0); }
+      50% { left: 50vw; top: 50vh; background-color: rgb(255, 0, 0); }
+      75% { left: 75vw; top: 75vh; background-color: rgb(0, 0, 255); }
+    }
+  </style>
+</head>
+<body>
+  <div class="animation-container">
+    <div class="ball"></div>
+    <div class="container container-1"></div>
+    <div class="container container-2"></div>
+    <div class="container container-3"></div>
+    <div class="container container-4"></div>
+    <div class="container container-5"></div>
+    <div class="text">Kid's Journey</div>
+    <div class="content">
+      <h2>About us</h2>
+      <p style="text-align: justify; padding:15px;">Welcome to MobileHub, where affordability meets innovation! At MobileHub, we take pride in being your go-to destination for cutting-edge mobile devices at unbeatable prices. We understand the importance of staying connected in today's fast-paced world, and that's why we strive to make high-quality smartphones accessible to everyone. With a commitment to providing top-notch technology without breaking the bank, MobileHub stands as the epitome of value and reliability in the realm of mobile devices. Experience the perfect blend of performance and affordability with MobileHub – your trusted partner in staying connected effortlessly.</p>
+    </div>
+  </div>
+  <div class="navbar">
+    
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      window.addEventListener("scroll", revealContent);
+
+      function revealContent() {
+        const content = document.querySelector(".content");
+        const animationContainer = document.querySelector(".animation-container");
+        const rect = animationContainer.getBoundingClientRect();
+
+        if (rect.top < window.innerHeight) {
+          content.style.opacity = 1;
+          window.removeEventListener("scroll", revealContent);
+        }
+      }
+    });
+  </script>
+</body>
+</html>

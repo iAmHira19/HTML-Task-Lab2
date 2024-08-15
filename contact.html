@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Contact us</title>
+        <link rel="stylesheet" href="style.css">
+        <style>
+            .formdiv{
+                
+                width: 50%;
+                height: 50%;
+                background-color: rgba(87, 87, 87, 0.075);
+                margin: 0 auto;
+                padding: 20px;
+                border-radius: 10px;
+                align-items: center;
+                justify-content: center;
+            }
+             
+            .input{
+                width:250px;
+                height:40px;
+                background-color: rgb(250, 181, 174,0.43);
+                border: #000 solid 1px;
+                border-radius: 5px;
+                margin: 1px;
+                padding: 5px;
+            }
+            .inputlabel{
+               width:20%;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="header">
+         <div class="logo">
+            <img src="./task/images/header.jpg" alt="logo">
+           
+            </div>
+        </div>
+        <div class="menu">
+      <ul class="listHeader">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="buy.html">Buy</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="register.html">Register</a></li>
+      </ul>
+        </div>
+        <div class="body">
+        <div class="content">
+             
+                <div class="form">
+                     <form>
+                        <div class="formdiv" style="display:flex; flex-direction: column;" >
+                            <h2>Fill this form</h2>
+                           <div class="data">
+                            <div class="l1" >
+                                <label class="inputlabel" name="name" for="name">Name</label>
+                                <input class="input"id="name" type="text">
+                            </div>
+                            <div class="l1">
+                                <label class="inputlabel" name="comment" for="comment">Comment</label>
+                                <textarea class="input" id="comment" type="textarea"></textarea>
+                            </div>
+                            <div class="commentbtn">
+                                <button id="btn1">Send Comment</button>
+                                <button id="btn2">Reset</button>
+
+                            </div>
+                        </div>
+                        </div>
+                     </form>
+                 </div>
+             
+        </div>     
+        </div>
+        <div class="footer">
+               <div class="links" >
+                <table>
+                    <tr>
+                        <img class="icon" src="./task/images/twiiter-icon.png">
+                        <img class="icon" src="./task/images/youtube-logo.png">
+                        <img class="icon" src="./task/images/g+.png">
+                        <img class="icon" src="./task/images/fb_icon.png">
+                    </tr>
+                </table>
+              </div>
+              <div class="copyright">
+                <copyright>Copyrights of University of Engineering and Technology UET</copyright>
+              </div>
+        </div>
+    </body>
+ </html>
